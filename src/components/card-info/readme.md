@@ -1,8 +1,4 @@
-# my-component
-
-
-
-<!-- Auto Generated Below -->
+# w-card-info
 
 
 ## Properties

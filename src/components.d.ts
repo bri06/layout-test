@@ -15,6 +15,10 @@ export namespace Components {
     'logo': string;
     'name': string;
   }
+  interface WIcon {
+    'color': string;
+    'iconName': string;
+  }
 }
 
 declare global {
@@ -25,8 +29,15 @@ declare global {
     prototype: HTMLWCardInfoElement;
     new (): HTMLWCardInfoElement;
   };
+
+  interface HTMLWIconElement extends Components.WIcon, HTMLStencilElement {}
+  var HTMLWIconElement: {
+    prototype: HTMLWIconElement;
+    new (): HTMLWIconElement;
+  };
   interface HTMLElementTagNameMap {
     'w-card-info': HTMLWCardInfoElement;
+    'w-icon': HTMLWIconElement;
   }
 }
 
@@ -36,9 +47,14 @@ declare namespace LocalJSX {
     'logo'?: string;
     'name'?: string;
   }
+  interface WIcon {
+    'color'?: string;
+    'iconName'?: string;
+  }
 
   interface IntrinsicElements {
     'w-card-info': WCardInfo;
+    'w-icon': WIcon;
   }
 }
 
@@ -49,6 +65,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'w-card-info': LocalJSX.WCardInfo & JSXBase.HTMLAttributes<HTMLWCardInfoElement>;
+      'w-icon': LocalJSX.WIcon & JSXBase.HTMLAttributes<HTMLWIconElement>;
     }
   }
 }
