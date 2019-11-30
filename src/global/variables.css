@@ -1,0 +1,10 @@
+:root {
+  --bar-height: 80px;
+  --bar-width: 768px;
+  --app-font: 'Averta', Serif;
+  --action-bar-icon-height: 32px;
+  --action-bar-icon-width: 32px;
+  --icon-background-color-hover: red;
+  --add-icon-blue: #5c5dff;
+  --add-icon-yellow: #e8bc00;
+}
