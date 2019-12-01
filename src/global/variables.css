@@ -15,6 +15,12 @@
   --pb-container-color-phase-one: rgba(27, 202, 255, 0.2);
   --pb-container-color-phase-two: rgba(92, 93, 255, 0.2);
   --pb-container-color-phase-three: rgba(232, 188, 0, 0.2);
+
+    /* Card info */
+    --font-size-title: 1rem;
+    --font-size-description: .75rem;
+    --font-size-title-color: #333333;
+    --font-size-description-color: #b8b8b8;
 }
 
 body {

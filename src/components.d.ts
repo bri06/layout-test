@@ -16,7 +16,7 @@ export namespace Components {
   interface WCardInfo {
     'description': string;
     'logo': string;
-    'name': string;
+    'title': string;
   }
   interface WIcon {
     'color': string;
@@ -34,9 +34,9 @@ export namespace Components {
     'finalValue': string;
     'initalValue': string;
     'logo': string;
-    'name': string;
     'phase': string;
     'time': string;
+    'title': string;
     'type': string;
   }
   interface WProgressBar {
@@ -99,7 +99,7 @@ declare namespace LocalJSX {
   interface WCardInfo {
     'description'?: string;
     'logo'?: string;
-    'name'?: string;
+    'title'?: string;
   }
   interface WIcon {
     'color'?: string;
@@ -117,9 +117,9 @@ declare namespace LocalJSX {
     'finalValue'?: string;
     'initalValue'?: string;
     'logo'?: string;
-    'name'?: string;
     'phase'?: string;
     'time'?: string;
+    'title'?: string;
     'type'?: string;
   }
   interface WProgressBar {
