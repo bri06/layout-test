@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.progress-bar {
+  position: relative;
+  width: 187px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px rgba(27, 202, 255, 0.2);
+  background-color: rgba(27, 202, 255, 0.2);
+}
+
+.progress-bar-content {
+  position: absolute;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #1bcaff;
+  animation: progressbar 1s forwards;
+  color: #FFF;
+  padding: 0px 8px;
+}
+.progress-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.progress-percentage {
+  justify-content: flex-end;
+  color: #1bcaff;
+  margin: 0 8px;
+}
+
+@keyframes progressbar {
+  0% { width: 0% }
+  100% { width: 50% }
+}
+
