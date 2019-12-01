@@ -8,7 +8,7 @@ import { Component, h, Prop } from '@stencil/core';
 export class PocComponent {
 
   @Prop() logo: string;
-  @Prop() title: string;
+  @Prop() titleCard: string;
   @Prop() date: string;
   @Prop() time: string;
   @Prop() initalValue: string;
@@ -22,11 +22,12 @@ export class PocComponent {
       <nav class="container">
         <w-card-info
           logo={this.logo}
-          title={this.title}
+          title-card={this.titleCard}
           description={this.description}>
         </w-card-info>
         <w-card-info
-          title={this.date}
+          class="info-date"
+          title-card={this.titleCard}
           description={this.time}>
         </w-card-info>
         <w-phase-manager initalValue={this.initalValue} finalPhase={this.finalValue} phase={this.phase} type={this.type}></w-phase-manager>

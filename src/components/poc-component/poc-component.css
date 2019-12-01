@@ -55,3 +55,10 @@
   transition: all .4s ease-in-out;
   color: white;
 }
+
+.info-date {
+  --font-size-title: .75rem;
+  --font-size-description: 0.625rem;
+  line-height: 1.12rem;
+  font-weight: 600;
+}

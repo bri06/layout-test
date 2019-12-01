@@ -8,7 +8,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class CardInfo {
 
   @Prop() logo: string
-  @Prop() title: string
+  @Prop() titleCard: string
   @Prop() description: string
 
   render() {
@@ -21,7 +21,7 @@ export class CardInfo {
             </figure>
           )}
           <div class="description-container">
-            <h3 class="title">{this.title}</h3>
+            <h3 class="title">{this.titleCard}</h3>
             <p class="description">{this.description}</p>
           </div>
         </div>
