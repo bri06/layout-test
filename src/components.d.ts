@@ -22,6 +22,12 @@ export namespace Components {
     'color': string;
     'iconName': string;
   }
+  interface WPhaseManager {
+    'finalPhase': string;
+    'initalValue': string;
+    'phase': string;
+    'type': string;
+  }
   interface WPocComponent {
     'date': string;
     'description': string;
@@ -29,9 +35,13 @@ export namespace Components {
     'initalValue': string;
     'logo': string;
     'name': string;
+    'phase': string;
     'time': string;
+    'type': string;
   }
-  interface WProgressBar {}
+  interface WProgressBar {
+    'phase': String;
+  }
 }
 
 declare global {
@@ -55,6 +65,12 @@ declare global {
     new (): HTMLWIconElement;
   };
 
+  interface HTMLWPhaseManagerElement extends Components.WPhaseManager, HTMLStencilElement {}
+  var HTMLWPhaseManagerElement: {
+    prototype: HTMLWPhaseManagerElement;
+    new (): HTMLWPhaseManagerElement;
+  };
+
   interface HTMLWPocComponentElement extends Components.WPocComponent, HTMLStencilElement {}
   var HTMLWPocComponentElement: {
     prototype: HTMLWPocComponentElement;
@@ -70,6 +86,7 @@ declare global {
     'w-add-icon': HTMLWAddIconElement;
     'w-card-info': HTMLWCardInfoElement;
     'w-icon': HTMLWIconElement;
+    'w-phase-manager': HTMLWPhaseManagerElement;
     'w-poc-component': HTMLWPocComponentElement;
     'w-progress-bar': HTMLWProgressBarElement;
   }
@@ -88,6 +105,12 @@ declare namespace LocalJSX {
     'color'?: string;
     'iconName'?: string;
   }
+  interface WPhaseManager {
+    'finalPhase'?: string;
+    'initalValue'?: string;
+    'phase'?: string;
+    'type'?: string;
+  }
   interface WPocComponent {
     'date'?: string;
     'description'?: string;
@@ -95,14 +118,19 @@ declare namespace LocalJSX {
     'initalValue'?: string;
     'logo'?: string;
     'name'?: string;
+    'phase'?: string;
     'time'?: string;
+    'type'?: string;
   }
-  interface WProgressBar {}
+  interface WProgressBar {
+    'phase'?: String;
+  }
 
   interface IntrinsicElements {
     'w-add-icon': WAddIcon;
     'w-card-info': WCardInfo;
     'w-icon': WIcon;
+    'w-phase-manager': WPhaseManager;
     'w-poc-component': WPocComponent;
     'w-progress-bar': WProgressBar;
   }
@@ -117,6 +145,7 @@ declare module "@stencil/core" {
       'w-add-icon': LocalJSX.WAddIcon & JSXBase.HTMLAttributes<HTMLWAddIconElement>;
       'w-card-info': LocalJSX.WCardInfo & JSXBase.HTMLAttributes<HTMLWCardInfoElement>;
       'w-icon': LocalJSX.WIcon & JSXBase.HTMLAttributes<HTMLWIconElement>;
+      'w-phase-manager': LocalJSX.WPhaseManager & JSXBase.HTMLAttributes<HTMLWPhaseManagerElement>;
       'w-poc-component': LocalJSX.WPocComponent & JSXBase.HTMLAttributes<HTMLWPocComponentElement>;
       'w-progress-bar': LocalJSX.WProgressBar & JSXBase.HTMLAttributes<HTMLWProgressBarElement>;
     }

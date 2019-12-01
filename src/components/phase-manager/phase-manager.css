@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+.phases {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 293px;
+  height: 56px;
+  border-radius: 18px;
+  border: solid 1px #eeeeee;
+}
+
+.phase-completed {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.phase-completed > p {
+  width: 32px;
+  height: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+.phases .phase-one {
+  background-image: linear-gradient(to bottom, #1bcaff, #1bcaff 100%);
+}
+
+.phases .phase-two {
+  background-color: #5c5dff;
+}
