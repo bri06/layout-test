@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.phase-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: dashed 1px #cfcfcf;
+}
+
+.phase-one {
+  color: var(--add-icon-blue, #5c5dff);
+}
+
+.phase-two {
+  color: var(--add-icon-yellow, #e8bc00);
+}
