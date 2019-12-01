@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'w-icon',
-  styleUrl: 'icon.css',
+  styleUrls: ['../../assets/style.css', 'icon.css'],
   shadow: true
 })
 export class Icon {
