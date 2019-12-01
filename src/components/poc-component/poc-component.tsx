@@ -14,6 +14,8 @@ export class PocComponent {
   @Prop() initalValue: string = '01';
   @Prop() finalValue: string = '50%';
   @Prop() description: string;
+  @Prop() type: string;
+  @Prop() phase: string;
 
   render() {
     return (
@@ -21,20 +23,13 @@ export class PocComponent {
         <w-card-info
           logo={this.logo}
           name={this.name}
-          description={this.description}
-        ></w-card-info>
+          description={this.description}>
+        </w-card-info>
         <w-card-info
           name={this.date}
-          description={this.time}
-        ></w-card-info>
-        <div class="phases">
-          <w-progress-bar>
-            <p slot='initial-value'>{this.initalValue}</p>
-            <p slot='final-value'>{this.finalValue}</p>
-          </w-progress-bar>
-          <w-add-icon type="phase-one"></w-add-icon>
-          <w-add-icon type="phase-two"></w-add-icon>
-        </div>
+          description={this.time}>
+        </w-card-info>
+        <w-phase-manager initalValue={this.initalValue} finalPhase={this.finalValue} phase={this.phase} type={this.type}></w-phase-manager>
         <div class="action-bar">
           <div class="icon"><w-icon iconName="icon-duplicate"></w-icon></div>
           <div class="icon"><w-icon iconName="icon-edit"></w-icon></div>

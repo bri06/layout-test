@@ -23,16 +23,6 @@
   height: calc(var(--bar-height, 80px) + 2px);
 }
 
-.phases {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 293px;
-  height: 56px;
-  border-radius: 18px;
-  border: solid 1px #eeeeee;
-}
-
 .phase-container {
   display: flex;
   align-items: center;
