@@ -11,8 +11,8 @@ export class PocComponent {
   @Prop() name: string;
   @Prop() date: string;
   @Prop() time: string;
-  @Prop() initalValue: Number;
-  @Prop() finalValue: Number;
+  @Prop() initalValue: string = '01';
+  @Prop() finalValue: string = '50%';
   @Prop() description: string;
 
   render() {
@@ -29,10 +29,11 @@ export class PocComponent {
         ></w-card-info>
         <div class="phases">
           <w-progress-bar>
-            <p slot='intial-value'>{this.initalValue}</p>
+            <p slot='initial-value'>{this.initalValue}</p>
             <p slot='final-value'>{this.finalValue}</p>
           </w-progress-bar>
           <w-add-icon type="phase-one"></w-add-icon>
+          <w-add-icon type="phase-two"></w-add-icon>
         </div>
         <div class="action-bar">
           <div class="icon"><w-icon iconName="icon-duplicate"></w-icon></div>

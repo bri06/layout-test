@@ -25,8 +25,8 @@ export namespace Components {
   interface WPocComponent {
     'date': string;
     'description': string;
-    'finalValue': Number;
-    'initalValue': Number;
+    'finalValue': string;
+    'initalValue': string;
     'logo': string;
     'name': string;
     'time': string;
@@ -91,8 +91,8 @@ declare namespace LocalJSX {
   interface WPocComponent {
     'date'?: string;
     'description'?: string;
-    'finalValue'?: Number;
-    'initalValue'?: Number;
+    'finalValue'?: string;
+    'initalValue'?: string;
     'logo'?: string;
     'name'?: string;
     'time'?: string;

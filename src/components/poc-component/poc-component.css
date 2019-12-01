@@ -2,10 +2,6 @@
   display: block;
 }
 
-body {
-  background-color: grey;
-}
-
 .container {
   display: flex;
   align-items: center;
