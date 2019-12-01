@@ -10,6 +10,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface WAddIcon {
+    'type': String;
+  }
   interface WCardInfo {
     'description': string;
     'logo': string;
@@ -19,10 +22,26 @@ export namespace Components {
     'color': string;
     'iconName': string;
   }
+  interface WPocComponent {
+    'date': string;
+    'description': string;
+    'finalValue': Number;
+    'initalValue': Number;
+    'logo': string;
+    'name': string;
+    'time': string;
+  }
+  interface WProgressBar {}
 }
 
 declare global {
 
+
+  interface HTMLWAddIconElement extends Components.WAddIcon, HTMLStencilElement {}
+  var HTMLWAddIconElement: {
+    prototype: HTMLWAddIconElement;
+    new (): HTMLWAddIconElement;
+  };
 
   interface HTMLWCardInfoElement extends Components.WCardInfo, HTMLStencilElement {}
   var HTMLWCardInfoElement: {
@@ -35,13 +54,31 @@ declare global {
     prototype: HTMLWIconElement;
     new (): HTMLWIconElement;
   };
+
+  interface HTMLWPocComponentElement extends Components.WPocComponent, HTMLStencilElement {}
+  var HTMLWPocComponentElement: {
+    prototype: HTMLWPocComponentElement;
+    new (): HTMLWPocComponentElement;
+  };
+
+  interface HTMLWProgressBarElement extends Components.WProgressBar, HTMLStencilElement {}
+  var HTMLWProgressBarElement: {
+    prototype: HTMLWProgressBarElement;
+    new (): HTMLWProgressBarElement;
+  };
   interface HTMLElementTagNameMap {
+    'w-add-icon': HTMLWAddIconElement;
     'w-card-info': HTMLWCardInfoElement;
     'w-icon': HTMLWIconElement;
+    'w-poc-component': HTMLWPocComponentElement;
+    'w-progress-bar': HTMLWProgressBarElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface WAddIcon {
+    'type'?: String;
+  }
   interface WCardInfo {
     'description'?: string;
     'logo'?: string;
@@ -51,10 +88,23 @@ declare namespace LocalJSX {
     'color'?: string;
     'iconName'?: string;
   }
+  interface WPocComponent {
+    'date'?: string;
+    'description'?: string;
+    'finalValue'?: Number;
+    'initalValue'?: Number;
+    'logo'?: string;
+    'name'?: string;
+    'time'?: string;
+  }
+  interface WProgressBar {}
 
   interface IntrinsicElements {
+    'w-add-icon': WAddIcon;
     'w-card-info': WCardInfo;
     'w-icon': WIcon;
+    'w-poc-component': WPocComponent;
+    'w-progress-bar': WProgressBar;
   }
 }
 
@@ -64,8 +114,11 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'w-add-icon': LocalJSX.WAddIcon & JSXBase.HTMLAttributes<HTMLWAddIconElement>;
       'w-card-info': LocalJSX.WCardInfo & JSXBase.HTMLAttributes<HTMLWCardInfoElement>;
       'w-icon': LocalJSX.WIcon & JSXBase.HTMLAttributes<HTMLWIconElement>;
+      'w-poc-component': LocalJSX.WPocComponent & JSXBase.HTMLAttributes<HTMLWPocComponentElement>;
+      'w-progress-bar': LocalJSX.WProgressBar & JSXBase.HTMLAttributes<HTMLWProgressBarElement>;
     }
   }
 }

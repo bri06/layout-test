@@ -1,0 +1,71 @@
+:host {
+  display: block;
+}
+
+body {
+  background-color: grey;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(var(--bar-width, 768px) - 32px);
+  height: var(--bar-height, 80px);
+  padding: 0 16px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  font-family: var(--app-font);
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+
+}
+
+.container:hover {
+  width: calc(var(--bar-width, 768px) + 2px);
+  height: calc(var(--bar-height, 80px) + 2px);
+}
+
+.phases {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 293px;
+  height: 56px;
+  border-radius: 18px;
+  border: solid 1px #eeeeee;
+}
+
+.phase-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: dashed 1px #cfcfcf;
+}
+
+.action-bar {
+  display: flex;
+  align-items: center;
+}
+
+.action-bar .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--action-bar-icon-width, 32px);
+  height: var(--action-bar-icon-height, 32px);
+}
+
+.action-bar .icon:hover {
+  width: var(--action-bar-icon-width, 32px);
+  height: var(--action-bar-icon-height, 32px);
+  background-color: var(--icon-background-color-hover,#333333);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all .4s ease-in-out;
+  color: white;
+}
