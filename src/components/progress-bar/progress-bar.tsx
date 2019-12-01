@@ -14,7 +14,7 @@ export class ProgressBar {
       <Host>
         <div class={`progress-bar progress-bar-${this.phase}`}>
           <div class={`progress-item progress-bar-content progress-bar-content-${this.phase}`}><slot name="initial-value"/></div>
-          <div class="progress-item progress-final-value"><slot name="final-value"/></div>
+          <div class={`progress-item final-value-${this.phase}`}><slot name="final-value"/></div>
         </div>
       </Host>
     );

@@ -7,4 +7,20 @@
   --icon-background-color-hover: #333333;
   --add-icon-blue: #5c5dff;
   --add-icon-yellow: #e8bc00;
+
+  /* Progress bar */
+  --pb-content-color-phase-one: #1bcaff;
+  --pb-content-color-phase-two: #5c5dff;
+  --pb-content-color-phase-three: #e8bc00;
+  --pb-container-color-phase-one: rgba(27, 202, 255, 0.2);
+  --pb-container-color-phase-two: rgba(92, 93, 255, 0.2);
+  --pb-container-color-phase-three: rgba(232, 188, 0, 0.2);
+}
+
+body {
+  background-color: lightgray
+}
+
+w-poc-component {
+  padding: 10px 0;
 }
