@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'w-progress-bar',
@@ -7,11 +7,13 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class ProgressBar {
 
+  @Prop() phase: String;
+
   render() {
     return (
       <Host>
-        <div class="progress-bar">
-          <div class="progress-item progress-bar-content"><slot name="initial-value"/></div>
+        <div class={`progress-bar progress-bar-${this.phase}`}>
+          <div class={`progress-item progress-bar-content progress-bar-content-${this.phase}`}><slot name="initial-value"/></div>
           <div class="progress-item progress-final-value"><slot name="final-value"/></div>
         </div>
       </Host>

@@ -7,8 +7,21 @@
   width: 187px;
   height: 30px;
   border-radius: 8px;
+}
+
+.progress-bar-phase-one {
   border: solid 1px rgba(27, 202, 255, 0.2);
   background-color: rgba(27, 202, 255, 0.2);
+}
+.progress-bar-phase-two {
+  border: solid 1px rgba(92, 93, 255, 0.2);
+  background-color: rgba(92, 93, 255, 0.2);
+
+}
+
+.progress-bar-phase-three {
+  border: solid 1px rgba(232, 188, 0, 0.2);
+  background-color: rgba(232, 188, 0, 0.2);
 }
 
 .progress-bar-content {
@@ -16,7 +29,6 @@
   border-radius: 8px;
   width: 100%;
   height: 100%;
-  background-color: #1bcaff;
   animation: progressbar 1s forwards;
   color: #FFF;
   padding: 0px 8px;
@@ -32,6 +44,18 @@
   justify-content: flex-end;
   color: #1bcaff;
   margin: 0 8px;
+}
+
+.progress-bar-content-phase-one {
+  background-color: #1bcaff;
+}
+
+.progress-bar-content-phase-two {
+  background-color: #5c5dff;
+}
+
+.progress-bar-content-phase-three {
+  background-color: #e8bc00;
 }
 
 @keyframes progressbar {
